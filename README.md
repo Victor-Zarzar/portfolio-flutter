@@ -1,17 +1,37 @@
-# portfolio_flutter
+<h1 align="center" id="header">
+ My Portfolio Flutter Web
+</h1>
 
-A new Flutter project.
+🤖 Stack:
 
-## Getting Started
+- Dart
+- Flutter
+- Google Fonts
+- Locale Language EN / PT-BR
+- Font Awesome
 
-This project is a starting point for a Flutter application.
+<br />
 
-A few resources to get you started if this is your first Flutter project:
+⚙️ How to install:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Project Clone
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# portfolio-flutter
+     git clone https://github.com/Victor-Zarzar/portfolio-flutter
+
+Enter in directory:
+
+     cd portfolio-flutter
+
+Open in your favorite editor(e.g. VSCode):
+
+    code .
+
+For install dependencies:
+
+    flutter pub get
+
+Run the app:
+
+    flutter run
+
+### Version WEB:
