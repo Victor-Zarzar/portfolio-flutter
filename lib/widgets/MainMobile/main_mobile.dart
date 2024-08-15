@@ -56,11 +56,13 @@ class MainMobile extends StatelessWidget {
               // intro message
               Text(
                 "textmain".tr(),
-                style: const TextStyle(
-                  fontSize: 24,
+                style: TextStyle(
+                  fontSize: 22,
                   height: 1.5,
                   fontWeight: FontWeight.bold,
-                  color: CustomColor.whitePrimary,
+                  color: notifier.isDark
+                      ? CustomColor.textFieldBg
+                      : CustomColor.hintDark,
                 ),
               ),
               const SizedBox(height: 15),
@@ -72,11 +74,29 @@ class MainMobile extends StatelessWidget {
                       onPressed: () {
                         js.context.callMethod('open', [SnsLinks.github]);
                       },
-                      icon: const FaIcon(
+                      icon: FaIcon(
                         FontAwesomeIcons.github,
                         size: 20,
+                        color: notifier.isDark
+                            ? CustomColor.hintDark
+                            : CustomColor.whitePrimary,
                       ),
-                      label: Text("github".tr()),
+                      label: Text(
+                        "github".tr(),
+                        style: TextStyle(
+                          color: notifier.isDark
+                              ? CustomColor.hintDark
+                              : CustomColor.whitePrimary,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        foregroundColor: notifier.isDark
+                            ? CustomColor.textFieldBg
+                            : CustomColor.hintDark,
+                        backgroundColor: notifier.isDark
+                            ? CustomColor.textFieldBg
+                            : CustomColor.hintDark, //
+                      ),
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -86,17 +106,35 @@ class MainMobile extends StatelessWidget {
                       onPressed: () {
                         js.context.callMethod('open', [SnsLinks.linkedIn]);
                       },
-                      icon: const FaIcon(
+                      icon: FaIcon(
                         FontAwesomeIcons.linkedin,
                         size: 20,
+                        color: notifier.isDark
+                            ? CustomColor.hintDark
+                            : CustomColor.whitePrimary,
                       ),
-                      label: Text("linkedin".tr()),
+                      label: Text(
+                        "linkedin".tr(),
+                        style: TextStyle(
+                          color: notifier.isDark
+                              ? CustomColor.hintDark
+                              : CustomColor.whitePrimary,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        foregroundColor: notifier.isDark
+                            ? CustomColor.textFieldBg
+                            : CustomColor.hintDark,
+                        backgroundColor: notifier.isDark
+                            ? CustomColor.textFieldBg
+                            : CustomColor.hintDark, //
+                      ),
                     ),
                   ),
                   const SizedBox(width: 10),
                   // Theme switch toggle
                   Switch(
-                    activeColor: CustomColor.bgLight1,
+                    activeColor: CustomColor.whitePrimary,
                     inactiveTrackColor: CustomColor.hintDark,
                     value: notifier.isDark,
                     onChanged: (value) => notifier.changeTheme(),

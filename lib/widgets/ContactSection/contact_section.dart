@@ -17,16 +17,19 @@ class ContactSection extends StatelessWidget {
     return Consumer<UiProvider>(builder: (context, notifier, child) {
       return Container(
         padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
-        color: notifier.isDark ? CustomColor.textFieldBg : CustomColor.hintDark,
+        color:
+            notifier.isDark ? CustomColor.scaffoldBg : CustomColor.whitePrimary,
         child: Column(
           children: [
             // title
             Text(
               "getintouch".tr(),
-              style: const TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
-                color: CustomColor.whitePrimary,
+                color: notifier.isDark
+                    ? CustomColor.textFieldBg
+                    : CustomColor.hintDark,
               ),
             ),
 
@@ -67,12 +70,30 @@ class ContactSection extends StatelessWidget {
               child: SizedBox(
                 width: double.maxFinite,
                 child: ElevatedButton.icon(
-                  icon: const FaIcon(
+                  icon: FaIcon(
                     FontAwesomeIcons.solidPaperPlane,
                     size: 18,
+                    color: notifier.isDark
+                        ? CustomColor.hintDark
+                        : CustomColor.whitePrimary,
                   ),
                   onPressed: () {},
-                  label: Text("submit".tr()),
+                  label: Text(
+                    "submit".tr(),
+                    style: TextStyle(
+                      color: notifier.isDark
+                          ? CustomColor.hintDark
+                          : CustomColor.whitePrimary,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: notifier.isDark
+                        ? CustomColor.textFieldBg
+                        : CustomColor.hintDark,
+                    backgroundColor: notifier.isDark
+                        ? CustomColor.textFieldBg
+                        : CustomColor.hintDark, //
+                  ),
                 ),
               ),
             ),
@@ -96,50 +117,60 @@ class ContactSection extends StatelessWidget {
                   onTap: () {
                     js.context.callMethod('open', [SnsLinks.github]);
                   },
-                  child: const FaIcon(
+                  child: FaIcon(
                     FontAwesomeIcons.github,
                     size: 28,
-                    color: CustomColor.whitePrimary,
+                    color: notifier.isDark
+                        ? CustomColor.textFieldBg
+                        : CustomColor.hintDark,
                   ),
                 ),
                 InkWell(
                   onTap: () {
                     js.context.callMethod('open', [SnsLinks.dev]);
                   },
-                  child: const FaIcon(
+                  child: FaIcon(
                     FontAwesomeIcons.dev,
                     size: 28,
-                    color: CustomColor.whitePrimary,
+                    color: notifier.isDark
+                        ? CustomColor.textFieldBg
+                        : CustomColor.hintDark,
                   ),
                 ),
                 InkWell(
                   onTap: () {
                     js.context.callMethod('open', [SnsLinks.linkedIn]);
                   },
-                  child: const FaIcon(
+                  child: FaIcon(
                     FontAwesomeIcons.linkedin,
                     size: 28,
-                    color: CustomColor.whitePrimary,
+                    color: notifier.isDark
+                        ? CustomColor.textFieldBg
+                        : CustomColor.hintDark,
                   ),
                 ),
                 InkWell(
                   onTap: () {
                     js.context.callMethod('open', [SnsLinks.facebook]);
                   },
-                  child: const FaIcon(
+                  child: FaIcon(
                     FontAwesomeIcons.facebook,
                     size: 28,
-                    color: CustomColor.whitePrimary,
+                    color: notifier.isDark
+                        ? CustomColor.textFieldBg
+                        : CustomColor.hintDark,
                   ),
                 ),
                 InkWell(
                   onTap: () {
                     js.context.callMethod('open', [SnsLinks.instagram]);
                   },
-                  child: const FaIcon(
+                  child: FaIcon(
                     FontAwesomeIcons.instagram,
                     size: 28,
-                    color: CustomColor.whitePrimary,
+                    color: notifier.isDark
+                        ? CustomColor.textFieldBg
+                        : CustomColor.hintDark,
                   ),
                 ),
               ],
