@@ -132,17 +132,6 @@ class MainMobile extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  // Theme switch toggle
-                  Switch(
-                    activeColor: CustomColor.whitePrimary,
-                    inactiveTrackColor: CustomColor.hintDark,
-                    value: notifier.isDark,
-                    onChanged: (value) => notifier.changeTheme(),
-                  ),
-                  const Icon(
-                    Icons.dark_mode,
-                    size: 20,
-                  ),
                 ],
               ),
             ],

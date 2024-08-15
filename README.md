@@ -9,6 +9,8 @@
 - Google Fonts
 - Locale Language EN / PT-BR
 - Font Awesome
+- Shared Preferences
+- Provider
 
 <br />
 
