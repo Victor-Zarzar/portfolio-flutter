@@ -33,18 +33,41 @@ class MainDesktop extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   // intro message
-                  Text(
-                    "textmain".tr(),
-                    style: TextStyle(
-                      fontSize: 30,
-                      height: 1.5,
-                      fontWeight: FontWeight.bold,
-                      color: notifier.isDark
-                          ? CustomColor.textFieldBg
-                          : CustomColor.hintDark,
+                  Row(
+                    children: [
+                      Text(
+                        "textmain".tr(),
+                        style: TextStyle(
+                          fontSize: 30,
+                          height: 1.5,
+                          fontWeight: FontWeight.bold,
+                          color: notifier.isDark
+                              ? CustomColor.textFieldBg
+                              : CustomColor.hintDark,
+                        ),
+                      ),
+                      Image.asset(
+                        "assets/hi.gif",
+                        height: 36,
+                        width: 36,
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
+                    child: Text(
+                      "textwomain".tr(),
+                      style: TextStyle(
+                        fontSize: 30,
+                        height: 1.5,
+                        fontWeight: FontWeight.bold,
+                        color: notifier.isDark
+                            ? CustomColor.textFieldBg
+                            : CustomColor.hintDark,
+                      ),
                     ),
                   ),
-                  const SizedBox(height: 15),
+                  const SizedBox(height: 18),
                   // contact buttons
                   Row(
                     children: [
@@ -115,14 +138,17 @@ class MainDesktop extends StatelessWidget {
                   ),
                 ],
               ),
-              CircleAvatar(
-                radius: (150),
-                backgroundColor: Colors.white,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(150),
-                  child: Image.asset(
-                    "assets/profile.jpg",
-                    width: screenWidth / 2,
+              Flexible(
+                child: CircleAvatar(
+                  radius: (180),
+                  backgroundColor: Colors.white,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(180),
+                    child: Image.asset(
+                      "assets/profile.jpg",
+                      width: screenWidth / 2,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),

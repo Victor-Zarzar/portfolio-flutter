@@ -48,24 +48,48 @@ class MainMobile extends StatelessWidget {
                     child: Image.asset(
                       "assets/profile.jpg",
                       width: screenWidth / 2,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
               ),
               const SizedBox(height: 30),
               // intro message
-              Text(
-                "textmain".tr(),
-                style: TextStyle(
-                  fontSize: 22,
-                  height: 1.5,
-                  fontWeight: FontWeight.bold,
-                  color: notifier.isDark
-                      ? CustomColor.textFieldBg
-                      : CustomColor.hintDark,
+              Row(
+                children: [
+                  Text(
+                    "textmain".tr(),
+                    style: TextStyle(
+                      fontSize: 22,
+                      height: 1.5,
+                      fontWeight: FontWeight.bold,
+                      color: notifier.isDark
+                          ? CustomColor.textFieldBg
+                          : CustomColor.hintDark,
+                    ),
+                  ),
+                  Image.asset(
+                    "assets/hi.gif",
+                    height: 36,
+                    width: 36,
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: Text(
+                  "textwomain".tr(),
+                  style: TextStyle(
+                    fontSize: 22,
+                    height: 1.5,
+                    fontWeight: FontWeight.bold,
+                    color: notifier.isDark
+                        ? CustomColor.textFieldBg
+                        : CustomColor.hintDark,
+                  ),
                 ),
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 18),
               Row(
                 children: [
                   SizedBox(

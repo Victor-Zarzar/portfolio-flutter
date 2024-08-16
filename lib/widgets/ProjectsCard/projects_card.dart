@@ -2,10 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/constants/Colors/colors.dart';
 import 'package:portfolio_flutter/provider/DarkTheme/app_theme.dart';
-import 'dart:js' as js;
-
 import 'package:portfolio_flutter/utils/ProjectsUtils/projects_utils.dart';
 import 'package:provider/provider.dart';
+import 'dart:js' as js;
 
 class ProjectCardWidget extends StatelessWidget {
   const ProjectCardWidget({
@@ -25,8 +24,8 @@ class ProjectCardWidget extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: notifier.isDark
-                ? CustomColor.whitePrimary
-                : CustomColor.scaffoldBg,
+                ? CustomColor.textFieldBg
+                : CustomColor.hintDark,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

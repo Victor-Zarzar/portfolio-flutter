@@ -34,6 +34,6 @@ For install dependencies:
 
 Run the app:
 
-    flutter run
+    flutter run -d chrome
 
 ### Version WEB:
