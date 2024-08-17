@@ -11,6 +11,7 @@
 - Font Awesome
 - Shared Preferences
 - Provider
+- Http
 
 <br />
 

@@ -16,6 +16,8 @@ class Footer extends StatelessWidget {
     return Consumer<UiProvider>(
       builder: (context, notifier, child) {
         return Container(
+          color:
+              notifier.isDark ? CustomColor.scaffoldBg : CustomColor.scaffoldBg,
           padding: const EdgeInsets.symmetric(vertical: 20),
           width: double.maxFinite,
           alignment: Alignment.center,
@@ -25,7 +27,7 @@ class Footer extends StatelessWidget {
               fontWeight: FontWeight.w400,
               color: notifier.isDark
                   ? CustomColor.textFieldBg
-                  : CustomColor.hintDark,
+                  : CustomColor.whitePrimary,
             ),
           ),
         );

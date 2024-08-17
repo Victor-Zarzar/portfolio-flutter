@@ -58,13 +58,16 @@ class NavDesktop extends StatelessWidget {
               // Theme switch toggle
               Switch(
                 activeColor: CustomColor.whitePrimary,
-                inactiveTrackColor: CustomColor.hintDark,
+                inactiveTrackColor: CustomColor.textFieldBg,
                 value: notifier.isDark,
                 onChanged: (value) => notifier.changeTheme(),
               ),
-              const Icon(
+              Icon(
                 Icons.dark_mode,
                 size: 18,
+                color: notifier.isDark
+                    ? CustomColor.whitePrimary
+                    : CustomColor.whitePrimary,
               ),
             ],
           ),
