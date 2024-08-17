@@ -27,6 +27,11 @@
     "youremail": "Your email",
     "yourmessage": "Your message",
     "submit": "Submit",
+    "sendemail": "Email sent successfully!",
+    "erroremail": "Error sending email",
+    "entermessage": "Please enter your message",
+    "entername": "Please enter your name",
+    "enteremail": "Please enter your email",
     "copyright": "Copyright ©️",
     "footer": "| All rights reserved."
 }
